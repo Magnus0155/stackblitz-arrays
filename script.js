@@ -21,6 +21,45 @@ https://www.fontenehuset-baerum.no/
 
 */
 
+
+let tvShows = ['Umbrella Academy', 'The wire', 'Sopranos', 'Got','silo'];
+
+console.log(tvShows[0])
+
+/*pet paragraf = document.createElement('p')
+paragraf.textContent = tvShows[2]
+document-body.appendChild(paragraf); */
+
+let input = document.querySelector('#input')
+let addBtn = document.querySelector('#addBtn')
+let removeBtn = document.querySelector('#removeBtn')
+let liste = document.querySelector('#liste')
+
+let handleListe = ['melk','brød','ost','skinke']
+
+addBtn.addEventListner('click', function(e) {
+  e.preventDefault();
+  let input = document.querySelector('#input').value;
+  handleListe.push(input);
+  liste.textContent = handleListe;
+});
+
+removeBtn.addEventListner('click', function(e) {
+  e.preventDefault()
+  handleListe.pop()
+  liste.textContent = handleListe;
+
+});
+
+let person = {
+  name:'Frank',
+  city: 'new York',
+  age: 54,
+  isMarried:false
+}
+
+console.log(person.name)
+
 const fontenehus = [
   {
     navn: 'Fontenehuset Oslo Øst',
@@ -47,4 +86,12 @@ const fontenehus = [
     adresse: 'Lihauggata 8B, 6003 Ålesund',
     nettside: 'https://www.fontenehuset-alesund.no/',
   },
+  {
+    navn:'Fontenehuset Bærum',
+    adresse:'Industriveien 2, 1337 Sandvika',
+    nettside:'https://www.fontenehuset-baerum.no/ ',
+  },
 ];
+
+let aTag = document.createElement('a');
+
